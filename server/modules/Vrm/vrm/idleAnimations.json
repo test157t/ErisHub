@@ -1,0 +1,383 @@
+{
+  "teasingWeightShift": {
+    "type": "body",
+    "duration": 17600,
+    "description": "teasing weight shift",
+    "proceduralLayers": true,
+    "sampleRate": 36,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.095, "phase": 0.18, "attackSec": 2.1, "releaseSec": 2.3, "bones": { "hips": { "x": 0.022, "y": 0.068, "z": 0.135 }, "spine": { "x": 0.03, "y": -0.032, "z": -0.07 }, "upperChest": { "x": 0.042, "y": -0.026, "z": -0.052 }, "leftUpperLeg": { "x": -0.026, "y": 0.016, "z": 0.042 }, "rightUpperLeg": { "x": 0.018, "y": -0.012, "z": -0.034 }, "leftLowerLeg": { "x": 0.03, "y": 0.004, "z": -0.01 }, "rightLowerLeg": { "x": -0.018, "y": -0.002, "z": 0.008 }, "leftFoot": { "x": -0.014, "y": 0.006, "z": 0.018 }, "rightFoot": { "x": 0.01, "y": -0.004, "z": -0.014 } } },
+      { "mode": "sine", "frequencyHz": 0.19, "phase": 1.25, "attackSec": 1.7, "releaseSec": 1.9, "bones": { "neck": { "x": 0.008, "y": 0.026, "z": 0.024 }, "head": { "x": 0.01, "y": 0.042, "z": 0.035 }, "leftShoulder": { "x": 0.01, "y": 0.012, "z": 0.026 }, "rightShoulder": { "x": 0.006, "y": -0.008, "z": -0.018 } } },
+      { "mode": "sine", "frequencyHz": 0.29, "phase": 2.8, "attackSec": 1.4, "releaseSec": 1.6, "bones": { "upperChest": { "x": 0.014, "y": 0.006, "z": 0.01 }, "leftUpperArm": { "x": -0.018, "y": 0.008, "z": 0.016 }, "rightUpperArm": { "x": -0.012, "y": -0.005, "z": -0.01 }, "leftLowerArm": { "x": -0.012, "y": 0.006, "z": 0.012 }, "rightLowerArm": { "x": -0.008, "y": -0.004, "z": -0.008 }, "leftHand": { "x": -0.01, "y": 0.004, "z": 0.014 }, "rightHand": { "x": -0.006, "y": -0.003, "z": -0.01 } } }
+    ],
+    "expressionChance": 0.82,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.025, "max": 0.055 }
+  },
+  "slowHipSway": {
+    "type": "hips",
+    "duration": 16800,
+    "description": "slow hip sway",
+    "proceduralLayers": true,
+    "sampleRate": 30,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.125, "phase": 0.2, "attackSec": 2.0, "releaseSec": 2.25, "bones": { "hips": { "x": 0.018, "y": 0.058, "z": 0.155 }, "spine": { "x": 0.03, "y": -0.033, "z": -0.075 }, "upperChest": { "x": 0.038, "y": -0.022, "z": -0.05 }, "leftUpperLeg": { "x": -0.032, "y": 0.018, "z": 0.054 }, "rightUpperLeg": { "x": 0.024, "y": -0.014, "z": -0.046 }, "leftLowerLeg": { "x": 0.034, "y": 0.006, "z": -0.012 }, "rightLowerLeg": { "x": -0.024, "y": -0.004, "z": 0.01 }, "leftFoot": { "x": -0.018, "y": 0.008, "z": 0.022 }, "rightFoot": { "x": 0.014, "y": -0.006, "z": -0.018 } } },
+      { "mode": "sine", "frequencyHz": 0.125, "phase": 2.35, "attackSec": 2.0, "releaseSec": 2.25, "bones": { "neck": { "x": 0.012, "y": 0.028, "z": -0.038 }, "head": { "x": 0.014, "y": 0.045, "z": -0.058 } } },
+      { "mode": "sine", "frequencyHz": 0.25, "phase": 0.9, "attackSec": 1.5, "releaseSec": 1.7, "bones": { "leftShoulder": { "x": 0.012, "y": 0.016, "z": 0.03 }, "rightShoulder": { "x": 0.008, "y": -0.01, "z": -0.02 }, "leftUpperArm": { "x": -0.034, "y": 0.016, "z": 0.028 }, "rightUpperArm": { "x": -0.022, "y": -0.01, "z": -0.018 }, "leftLowerArm": { "x": -0.02, "y": 0.008, "z": 0.014 }, "rightLowerArm": { "x": -0.014, "y": -0.006, "z": -0.01 }, "leftHand": { "x": -0.018, "y": 0.006, "z": 0.016 }, "rightHand": { "x": -0.012, "y": -0.004, "z": -0.012 } } }
+    ],
+    "expressionChance": 0.76,
+    "expressions": ["happy", "relaxed", "blinkLeft"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.02, "max": 0.05 }
+  },
+  "comeHitherLean": {
+    "type": "torso",
+    "duration": 11800,
+    "description": "come hither lean",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4200,
+    "stages": [
+      { "duration": 2600, "rotations": { "hips": { "x": 0.018, "y": -0.035, "z": 0.035 }, "spine": { "x": 0.055, "y": 0.055, "z": 0.025 }, "upperChest": { "x": 0.07, "y": 0.065, "z": 0.018 }, "neck": { "x": -0.015, "y": 0.055, "z": -0.04 }, "head": { "x": -0.02, "y": 0.095, "z": -0.065 } } },
+      { "duration": 2400, "rotations": { "hips": { "x": 0.012, "y": -0.05, "z": 0.045 }, "spine": { "x": 0.075, "y": 0.08, "z": 0.035 }, "upperChest": { "x": 0.095, "y": 0.09, "z": 0.028 }, "neck": { "x": -0.025, "y": 0.075, "z": -0.055 }, "head": { "x": -0.03, "y": 0.13, "z": -0.09 } } },
+      { "duration": 1800, "rotations": { "spine": { "x": 0.03, "y": 0.02, "z": 0.008 }, "upperChest": { "x": 0.035, "y": 0.02, "z": 0.006 }, "neck": { "x": -0.006, "y": 0.02, "z": -0.012 }, "head": { "x": -0.008, "y": 0.035, "z": -0.018 } } }
+    ],
+    "expressionChance": 0.9,
+    "expressions": ["relaxed", "happy", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.025, "max": 0.06 }
+  },
+  "coyLookAway": {
+    "type": "head",
+    "duration": 12500,
+    "description": "coy look away",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4400,
+    "stages": [
+      { "duration": 2500, "rotations": { "hips": { "x": 0.01, "y": 0.018, "z": -0.02 }, "spine": { "x": 0.018, "y": -0.03, "z": 0.024 }, "upperChest": { "x": 0.024, "y": -0.045, "z": 0.032 }, "neck": { "x": 0.018, "y": -0.075, "z": 0.065 }, "head": { "x": 0.02, "y": -0.14, "z": 0.115 } } },
+      { "duration": 2100, "rotations": { "spine": { "x": 0.014, "y": -0.016, "z": 0.012 }, "upperChest": { "x": 0.018, "y": -0.025, "z": 0.018 }, "neck": { "x": 0.008, "y": -0.035, "z": 0.028 }, "head": { "x": 0.012, "y": -0.065, "z": 0.05 } } },
+      { "duration": 2800, "rotations": { "upperChest": { "x": 0.018, "y": 0.035, "z": -0.022 }, "neck": { "x": -0.004, "y": 0.06, "z": -0.048 }, "head": { "x": -0.008, "y": 0.105, "z": -0.08 } } }
+    ],
+    "expressionChance": 0.9,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"]
+  },
+  "shoulderSettle": {
+    "type": "arms",
+    "duration": 9800,
+    "description": "soft shoulder settle",
+    "multiStage": true,
+    "sampleRate": 28,
+    "returnDuration": 3600,
+    "stages": [
+      { "duration": 2800, "rotations": { "hips": { "x": 0.008, "y": 0.014, "z": 0.018 }, "leftShoulder": { "x": 0.026, "y": 0.036, "z": 0.072 }, "rightShoulder": { "x": 0.014, "y": -0.016, "z": -0.03 }, "leftUpperArm": { "x": -0.075, "y": 0.035, "z": 0.075 }, "rightUpperArm": { "x": -0.03, "y": -0.014, "z": -0.028 }, "upperChest": { "x": 0.024, "y": 0.018, "z": 0.018 }, "neck": { "x": -0.004, "y": 0.018, "z": -0.012 }, "head": { "x": -0.008, "y": 0.035, "z": -0.022 } } },
+      { "duration": 2200, "rotations": { "leftShoulder": { "x": 0.01, "y": 0.012, "z": 0.022 }, "rightShoulder": { "x": 0.018, "y": -0.02, "z": -0.04 }, "leftUpperArm": { "x": -0.024, "y": 0.01, "z": 0.022 }, "rightUpperArm": { "x": -0.055, "y": -0.025, "z": -0.052 }, "upperChest": { "x": 0.018, "y": -0.014, "z": -0.012 }, "head": { "x": -0.006, "y": -0.026, "z": 0.018 } } },
+      { "duration": 2800, "rotations": { "leftShoulder": { "x": 0.008, "y": -0.006, "z": -0.012 }, "rightShoulder": { "x": 0.028, "y": 0.034, "z": 0.07 }, "leftUpperArm": { "x": -0.018, "y": -0.006, "z": -0.012 }, "rightUpperArm": { "x": -0.078, "y": 0.036, "z": 0.075 }, "upperChest": { "x": 0.022, "y": -0.018, "z": -0.018 }, "neck": { "x": -0.006, "y": -0.018, "z": 0.014 }, "head": { "x": -0.012, "y": -0.038, "z": 0.028 } } }
+    ],
+    "expressionChance": 0.55,
+    "expressions": ["neutral", "relaxed"]
+  },
+  "breathingPoise": {
+    "type": "torso",
+    "duration": 13500,
+    "description": "breathing poise",
+    "proceduralLayers": true,
+    "sampleRate": 30,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.155, "phase": 0.0, "attackSec": 1.5, "releaseSec": 1.8, "bones": { "spine": { "x": 0.016, "y": 0.006, "z": 0.008 }, "upperChest": { "x": 0.064, "y": 0.01, "z": 0.012 }, "neck": { "x": -0.01, "y": 0.004, "z": 0.004 } } },
+      { "mode": "sine", "frequencyHz": 0.075, "phase": 1.4, "attackSec": 1.8, "releaseSec": 2.0, "bones": { "hips": { "x": 0.014, "y": 0.026, "z": 0.04 }, "head": { "x": 0.008, "y": 0.022, "z": -0.026 } } },
+      { "mode": "pulse", "centerSec": 6.8, "widthSec": 2.1, "attackSec": 1.1, "releaseSec": 1.8, "bones": { "upperChest": { "x": 0.035, "y": 0.006, "z": 0.006 }, "leftShoulder": { "x": 0.01, "y": 0.01, "z": 0.018 }, "rightShoulder": { "x": 0.006, "y": -0.006, "z": -0.012 }, "head": { "x": -0.016, "y": 0.034, "z": -0.026 } } }
+    ],
+    "expressionChance": 0.72,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"]
+  },
+  "playfulNod": {
+    "type": "head",
+    "duration": 8600,
+    "description": "playful nod",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 3400,
+    "stages": [
+      { "duration": 1800, "rotations": { "head": { "x": 0.11, "y": 0.025, "z": -0.035 }, "neck": { "x": 0.055, "y": 0.014, "z": -0.02 }, "upperChest": { "x": 0.022, "y": 0.008, "z": -0.008 } } },
+      { "duration": 1400, "rotations": { "head": { "x": -0.025, "y": 0.04, "z": -0.055 }, "neck": { "x": -0.01, "y": 0.02, "z": -0.03 }, "upperChest": { "x": 0.01, "y": 0.012, "z": -0.012 } } },
+      { "duration": 1800, "rotations": { "head": { "x": 0.08, "y": -0.035, "z": 0.035 }, "neck": { "x": 0.04, "y": -0.018, "z": 0.018 }, "upperChest": { "x": 0.018, "y": -0.008, "z": 0.008 } } }
+    ],
+    "expressionChance": 0.88,
+    "expressions": ["happy", "relaxed", "blinkLeft", "blinkRight"]
+  },
+  "commandingLeanIn": {
+    "type": "torso",
+    "duration": 11200,
+    "description": "commanding lean in",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4100,
+    "stages": [
+      { "duration": 2200, "rotations": { "hips": { "x": 0.018, "y": 0.018, "z": -0.018 }, "spine": { "x": 0.06, "y": -0.025, "z": 0.014 }, "upperChest": { "x": 0.105, "y": -0.032, "z": 0.014 }, "neck": { "x": -0.035, "y": 0.018, "z": -0.012 }, "head": { "x": -0.05, "y": 0.035, "z": -0.018 } } },
+      { "duration": 2600, "rotations": { "hips": { "x": 0.012, "y": 0.035, "z": -0.03 }, "spine": { "x": 0.082, "y": -0.045, "z": 0.02 }, "upperChest": { "x": 0.135, "y": -0.055, "z": 0.025 }, "neck": { "x": -0.05, "y": 0.035, "z": -0.018 }, "head": { "x": -0.07, "y": 0.07, "z": -0.032 }, "leftShoulder": { "x": 0.02, "y": 0.018, "z": 0.035 }, "rightShoulder": { "x": 0.016, "y": -0.014, "z": -0.026 } } },
+      { "duration": 1700, "rotations": { "spine": { "x": 0.035, "y": -0.012, "z": 0.006 }, "upperChest": { "x": 0.045, "y": -0.016, "z": 0.008 }, "neck": { "x": -0.012, "y": 0.012, "z": -0.006 }, "head": { "x": -0.02, "y": 0.024, "z": -0.01 } } }
+    ],
+    "expressionChance": 0.92,
+    "expressions": ["relaxed", "happy", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.018, "max": 0.045 }
+  },
+  "slowAppraisal": {
+    "type": "head",
+    "duration": 14200,
+    "description": "slow appraisal",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4600,
+    "stages": [
+      { "duration": 2300, "rotations": { "hips": { "x": 0.012, "y": -0.018, "z": 0.026 }, "spine": { "x": 0.018, "y": 0.028, "z": -0.022 }, "upperChest": { "x": 0.026, "y": 0.038, "z": -0.032 }, "neck": { "x": 0.012, "y": 0.075, "z": -0.055 }, "head": { "x": 0.018, "y": 0.15, "z": -0.095 } } },
+      { "duration": 2500, "rotations": { "upperChest": { "x": 0.02, "y": 0.012, "z": -0.01 }, "neck": { "x": 0.035, "y": 0.018, "z": -0.014 }, "head": { "x": 0.075, "y": 0.035, "z": -0.022 } } },
+      { "duration": 2600, "rotations": { "hips": { "x": 0.01, "y": 0.02, "z": -0.026 }, "spine": { "x": 0.018, "y": -0.03, "z": 0.022 }, "upperChest": { "x": 0.024, "y": -0.042, "z": 0.032 }, "neck": { "x": 0.008, "y": -0.078, "z": 0.052 }, "head": { "x": 0.014, "y": -0.145, "z": 0.09 } } },
+      { "duration": 1800, "rotations": { "upperChest": { "x": 0.018, "y": 0, "z": 0 }, "neck": { "x": -0.01, "y": 0, "z": 0 }, "head": { "x": -0.022, "y": 0.012, "z": -0.008 } } }
+    ],
+    "expressionChance": 0.88,
+    "expressions": ["relaxed", "blinkLeft", "blinkRight"]
+  },
+  "chinLiftJudgement": {
+    "type": "head",
+    "duration": 9600,
+    "description": "chin lift judgement",
+    "multiStage": true,
+    "sampleRate": 28,
+    "returnDuration": 3800,
+    "stages": [
+      { "duration": 1900, "rotations": { "spine": { "x": -0.018, "y": 0.016, "z": -0.01 }, "upperChest": { "x": -0.028, "y": 0.025, "z": -0.014 }, "neck": { "x": -0.055, "y": 0.03, "z": -0.018 }, "head": { "x": -0.105, "y": 0.05, "z": -0.025 } } },
+      { "duration": 2400, "rotations": { "spine": { "x": -0.012, "y": 0.025, "z": -0.018 }, "upperChest": { "x": -0.018, "y": 0.04, "z": -0.025 }, "neck": { "x": -0.045, "y": 0.055, "z": -0.035 }, "head": { "x": -0.085, "y": 0.105, "z": -0.055 } } },
+      { "duration": 1800, "rotations": { "upperChest": { "x": -0.006, "y": 0.012, "z": -0.006 }, "neck": { "x": -0.012, "y": 0.016, "z": -0.008 }, "head": { "x": -0.024, "y": 0.028, "z": -0.012 } } }
+    ],
+    "expressionChance": 0.76,
+    "expressions": ["neutral", "relaxed"]
+  },
+  "possessiveShoulderRoll": {
+    "type": "arms",
+    "duration": 12800,
+    "description": "possessive shoulder roll",
+    "proceduralLayers": true,
+    "sampleRate": 30,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.125, "phase": 0.35, "attackSec": 1.4, "releaseSec": 1.6, "bones": { "hips": { "x": 0.012, "y": 0.025, "z": 0.045 }, "spine": { "x": 0.022, "y": -0.018, "z": -0.026 }, "upperChest": { "x": 0.04, "y": -0.03, "z": -0.035 } } },
+      { "mode": "sine", "frequencyHz": 0.25, "phase": 1.4, "attackSec": 1.1, "releaseSec": 1.4, "bones": { "leftShoulder": { "x": 0.035, "y": 0.03, "z": 0.065 }, "rightShoulder": { "x": 0.022, "y": -0.018, "z": -0.045 }, "leftUpperArm": { "x": -0.06, "y": 0.025, "z": 0.055 }, "rightUpperArm": { "x": -0.035, "y": -0.016, "z": -0.032 } } },
+      { "mode": "sine", "frequencyHz": 0.125, "phase": 2.6, "attackSec": 1.3, "releaseSec": 1.6, "bones": { "neck": { "x": -0.006, "y": 0.026, "z": -0.026 }, "head": { "x": -0.012, "y": 0.055, "z": -0.046 } } }
+    ],
+    "expressionChance": 0.82,
+    "expressions": ["relaxed", "happy", "blinkLeft"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.015, "max": 0.04 }
+  },
+  "sternHipSettle": {
+    "type": "hips",
+    "duration": 13200,
+    "description": "stern hip settle",
+    "proceduralLayers": true,
+    "sampleRate": 30,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.14, "phase": 0.1, "attackSec": 1.2, "releaseSec": 1.8, "bones": { "hips": { "x": 0.02, "y": -0.055, "z": 0.145 }, "spine": { "x": 0.018, "y": 0.035, "z": -0.072 }, "upperChest": { "x": 0.028, "y": 0.045, "z": -0.046 } } },
+      { "mode": "sine", "frequencyHz": 0.28, "phase": 1.0, "attackSec": 1.1, "releaseSec": 1.4, "bones": { "neck": { "x": -0.018, "y": 0.022, "z": -0.018 }, "head": { "x": -0.038, "y": 0.05, "z": -0.035 } } }
+    ],
+    "expressionChance": 0.68,
+    "expressions": ["neutral", "relaxed"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.025, "max": 0.055 }
+  },
+  "controlledBreathIn": {
+    "type": "torso",
+    "duration": 11600,
+    "description": "controlled breath in",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4200,
+    "stages": [
+      { "duration": 2800, "rotations": { "hips": { "x": -0.008, "y": 0.012, "z": 0.01 }, "spine": { "x": -0.018, "y": 0.008, "z": 0.006 }, "upperChest": { "x": -0.058, "y": 0.012, "z": 0.006 }, "neck": { "x": 0.018, "y": 0.008, "z": -0.006 }, "head": { "x": 0.028, "y": 0.018, "z": -0.012 } } },
+      { "duration": 2400, "rotations": { "spine": { "x": -0.01, "y": 0.02, "z": -0.014 }, "upperChest": { "x": -0.035, "y": 0.036, "z": -0.024 }, "neck": { "x": -0.008, "y": 0.035, "z": -0.024 }, "head": { "x": -0.016, "y": 0.075, "z": -0.045 } } },
+      { "duration": 2600, "rotations": { "spine": { "x": 0.018, "y": 0.004, "z": 0.004 }, "upperChest": { "x": 0.035, "y": 0.006, "z": 0.004 }, "neck": { "x": -0.008, "y": 0.004, "z": 0.002 }, "head": { "x": -0.014, "y": 0.008, "z": -0.004 } } }
+    ],
+    "expressionChance": 0.82,
+    "expressions": ["relaxed", "happy", "blinkRight"]
+  },
+  "softBustCupping": {
+    "type": "arms",
+    "duration": 16800,
+    "description": "soft bust cupping tease",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4800,
+    "stages": [
+      { "duration": 3200, "rotations": { "hips": { "x": 0.014, "y": 0.03, "z": 0.038 }, "spine": { "x": 0.022, "y": -0.024, "z": -0.02 }, "upperChest": { "x": 0.052, "y": -0.032, "z": -0.028 }, "leftUpperLeg": { "x": -0.018, "y": 0.012, "z": 0.03 }, "rightUpperLeg": { "x": 0.014, "y": -0.008, "z": -0.024 }, "leftLowerLeg": { "x": 0.018, "y": 0.004, "z": -0.006 }, "rightLowerLeg": { "x": -0.012, "y": -0.002, "z": 0.005 }, "leftFoot": { "x": -0.012, "y": 0.004, "z": 0.014 }, "rightFoot": { "x": 0.008, "y": -0.003, "z": -0.01 }, "leftShoulder": { "x": 0.08, "y": 0.095, "z": 0.16 }, "rightShoulder": { "x": 0.07, "y": -0.088, "z": -0.145 }, "leftUpperArm": { "x": -0.42, "y": 0.25, "z": 0.42 }, "rightUpperArm": { "x": -0.36, "y": -0.22, "z": -0.38 }, "leftLowerArm": { "x": -0.52, "y": 0.16, "z": 0.2 }, "rightLowerArm": { "x": -0.44, "y": -0.14, "z": -0.18 }, "leftHand": { "x": -0.22, "y": 0.08, "z": 0.16 }, "rightHand": { "x": -0.18, "y": -0.07, "z": -0.14 } } },
+      { "duration": 2600, "rotations": { "hips": { "x": 0.008, "y": 0.018, "z": 0.02 }, "upperChest": { "x": 0.082, "y": -0.02, "z": -0.018 }, "leftShoulder": { "x": 0.08, "y": 0.09, "z": 0.14 }, "rightShoulder": { "x": 0.072, "y": -0.085, "z": -0.132 }, "leftUpperArm": { "x": -0.38, "y": 0.24, "z": 0.36 }, "rightUpperArm": { "x": -0.34, "y": -0.22, "z": -0.34 }, "leftLowerArm": { "x": -0.46, "y": 0.16, "z": 0.2 }, "rightLowerArm": { "x": -0.4, "y": -0.14, "z": -0.18 }, "leftHand": { "x": -0.18, "y": 0.07, "z": 0.14 }, "rightHand": { "x": -0.16, "y": -0.06, "z": -0.13 }, "neck": { "x": -0.02, "y": 0.042, "z": -0.028 }, "head": { "x": -0.032, "y": 0.078, "z": -0.055 } } },
+      { "duration": 520, "rotations": { "upperChest": { "x": 0.13, "y": -0.028, "z": -0.026 }, "spine": { "x": 0.038, "y": -0.01, "z": -0.012 }, "leftShoulder": { "x": 0.095, "y": 0.105, "z": 0.17 }, "rightShoulder": { "x": 0.086, "y": -0.1, "z": -0.16 }, "leftUpperArm": { "x": -0.42, "y": 0.26, "z": 0.4 }, "rightUpperArm": { "x": -0.38, "y": -0.24, "z": -0.38 }, "leftLowerArm": { "x": -0.5, "y": 0.17, "z": 0.22 }, "rightLowerArm": { "x": -0.46, "y": -0.16, "z": -0.2 }, "leftHand": { "x": -0.22, "y": 0.08, "z": 0.16 }, "rightHand": { "x": -0.2, "y": -0.075, "z": -0.15 }, "neck": { "x": -0.03, "y": 0.052, "z": -0.036 }, "head": { "x": -0.044, "y": 0.092, "z": -0.068 } } },
+      { "duration": 620, "rotations": { "upperChest": { "x": 0.068, "y": -0.012, "z": -0.01 }, "spine": { "x": 0.022, "y": -0.004, "z": -0.004 }, "leftShoulder": { "x": 0.058, "y": 0.074, "z": 0.102 }, "rightShoulder": { "x": 0.046, "y": -0.066, "z": -0.09 }, "leftUpperArm": { "x": -0.19, "y": 0.095, "z": 0.165 }, "rightUpperArm": { "x": -0.165, "y": -0.082, "z": -0.15 }, "head": { "x": -0.028, "y": 0.062, "z": -0.046 } } },
+      { "duration": 2600, "rotations": { "upperChest": { "x": 0.058, "y": 0.012, "z": 0.01 }, "leftShoulder": { "x": 0.03, "y": 0.036, "z": 0.052 }, "rightShoulder": { "x": 0.022, "y": -0.03, "z": -0.044 }, "leftUpperArm": { "x": -0.09, "y": 0.044, "z": 0.062 }, "rightUpperArm": { "x": -0.075, "y": -0.036, "z": -0.052 }, "leftLowerArm": { "x": -0.095, "y": 0.018, "z": 0.02 }, "rightLowerArm": { "x": -0.078, "y": -0.014, "z": -0.016 }, "head": { "x": -0.014, "y": 0.03, "z": -0.018 } } },
+      { "duration": 1800, "rotations": { "upperChest": { "x": 0.02, "y": 0.006, "z": 0.004 }, "leftShoulder": { "x": 0.008, "y": 0.008, "z": 0.012 }, "rightShoulder": { "x": 0.006, "y": -0.006, "z": -0.01 }, "leftUpperArm": { "x": -0.02, "y": 0.006, "z": 0.008 }, "rightUpperArm": { "x": -0.018, "y": -0.005, "z": -0.007 }, "head": { "x": -0.006, "y": 0.012, "z": -0.006 } } }
+    ],
+    "expressionChance": 0.92,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.018, "max": 0.045 }
+  },
+  "chestFlutterShake": {
+    "type": "torso",
+    "duration": 12400,
+    "description": "chest flutter shake",
+    "proceduralLayers": true,
+    "sampleRate": 48,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.12, "phase": 0.35, "attackSec": 1.2, "releaseSec": 1.5, "bones": { "hips": { "x": 0.014, "y": 0.038, "z": 0.07 }, "spine": { "x": 0.022, "y": -0.026, "z": -0.038 }, "upperChest": { "x": 0.06, "y": -0.03, "z": -0.044 } } },
+      { "mode": "sine", "frequencyHz": 0.78, "phase": 1.1, "attackSec": 0.45, "releaseSec": 0.9, "bones": { "upperChest": { "x": 0.024, "y": 0.018, "z": 0.032 }, "leftShoulder": { "x": 0.014, "y": 0.024, "z": 0.034 }, "rightShoulder": { "x": 0.01, "y": -0.018, "z": -0.028 } } },
+      { "mode": "pulse", "centerSec": 4.6, "widthSec": 0.42, "attackSec": 0.22, "releaseSec": 0.9, "bones": { "upperChest": { "x": 0.08, "y": 0.012, "z": 0.018 }, "spine": { "x": 0.026, "y": -0.006, "z": -0.006 }, "leftShoulder": { "x": 0.02, "y": 0.028, "z": 0.04 }, "rightShoulder": { "x": 0.016, "y": -0.024, "z": -0.036 }, "neck": { "x": -0.018, "y": 0.012, "z": -0.01 }, "head": { "x": -0.032, "y": 0.028, "z": -0.022 } } },
+      { "mode": "pulse", "centerSec": 5.15, "widthSec": 0.34, "attackSec": 0.18, "releaseSec": 0.65, "bones": { "upperChest": { "x": -0.04, "y": -0.006, "z": -0.01 }, "spine": { "x": -0.014, "y": 0.002, "z": 0.003 }, "leftShoulder": { "x": -0.008, "y": -0.01, "z": -0.014 }, "rightShoulder": { "x": -0.006, "y": 0.008, "z": 0.012 } } },
+      { "mode": "triangle", "frequencyHz": 0.31, "phase": 2.4, "attackSec": 1.0, "releaseSec": 1.3, "bones": { "neck": { "x": -0.006, "y": 0.022, "z": -0.02 }, "head": { "x": -0.012, "y": 0.046, "z": -0.038 }, "leftUpperArm": { "x": -0.026, "y": 0.014, "z": 0.024 }, "rightUpperArm": { "x": -0.02, "y": -0.01, "z": -0.018 } } }
+    ],
+    "expressionChance": 0.88,
+    "expressions": ["happy", "relaxed", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.014, "max": 0.035 }
+  },
+  "playfulWinkSway": {
+    "type": "body",
+    "duration": 14200,
+    "description": "playful wink sway",
+    "proceduralLayers": true,
+    "sampleRate": 30,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.135, "phase": 0.05, "attackSec": 1.45, "releaseSec": 1.55, "bones": { "hips": { "x": 0.018, "y": 0.078, "z": 0.145 }, "spine": { "x": 0.028, "y": -0.048, "z": -0.078 }, "upperChest": { "x": 0.046, "y": -0.038, "z": -0.06 } } },
+      { "mode": "sine", "frequencyHz": 0.135, "phase": 2.3, "attackSec": 1.45, "releaseSec": 1.55, "bones": { "neck": { "x": -0.014, "y": 0.054, "z": -0.058 }, "head": { "x": -0.024, "y": 0.112, "z": -0.098 }, "leftShoulder": { "x": 0.022, "y": 0.022, "z": 0.046 }, "rightShoulder": { "x": 0.014, "y": -0.014, "z": -0.03 } } },
+      { "mode": "pulse", "centerSec": 6.4, "widthSec": 1.3, "attackSec": 0.8, "releaseSec": 1.4, "bones": { "head": { "x": -0.018, "y": 0.036, "z": -0.032 }, "neck": { "x": -0.008, "y": 0.02, "z": -0.018 }, "upperChest": { "x": 0.018, "y": -0.01, "z": -0.012 } } }
+    ],
+    "expressionChance": 0.96,
+    "expressions": ["blinkLeft", "blinkRight", "happy", "relaxed"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.025, "max": 0.06 }
+  },
+  "feminineArmSweep": {
+    "type": "arms",
+    "duration": 12600,
+    "description": "feminine arm sweep",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4300,
+    "stages": [
+      { "duration": 2300, "rotations": { "hips": { "x": 0.012, "y": -0.024, "z": 0.032 }, "spine": { "x": 0.025, "y": 0.03, "z": -0.018 }, "upperChest": { "x": 0.04, "y": 0.04, "z": -0.026 }, "leftUpperLeg": { "x": -0.02, "y": 0.012, "z": 0.035 }, "rightUpperLeg": { "x": 0.014, "y": -0.008, "z": -0.026 }, "leftFoot": { "x": -0.012, "y": 0.004, "z": 0.016 }, "rightFoot": { "x": 0.008, "y": -0.003, "z": -0.012 }, "leftShoulder": { "x": 0.035, "y": 0.035, "z": 0.08 }, "leftUpperArm": { "x": -0.12, "y": 0.065, "z": 0.14 }, "leftLowerArm": { "x": -0.16, "y": 0.04, "z": 0.05 }, "rightShoulder": { "x": 0.012, "y": -0.014, "z": -0.028 }, "rightUpperArm": { "x": -0.035, "y": -0.014, "z": -0.024 } } },
+      { "duration": 3000, "rotations": { "hips": { "x": 0.012, "y": 0.035, "z": -0.036 }, "spine": { "x": 0.028, "y": -0.042, "z": 0.025 }, "upperChest": { "x": 0.05, "y": -0.055, "z": 0.034 }, "leftShoulder": { "x": 0.018, "y": 0.014, "z": 0.028 }, "leftUpperArm": { "x": -0.05, "y": 0.018, "z": 0.028 }, "rightShoulder": { "x": 0.05, "y": -0.042, "z": -0.095 }, "rightUpperArm": { "x": -0.14, "y": -0.08, "z": -0.16 }, "rightLowerArm": { "x": -0.18, "y": -0.04, "z": -0.055 }, "neck": { "x": -0.006, "y": -0.04, "z": 0.035 }, "head": { "x": -0.012, "y": -0.08, "z": 0.065 } } },
+      { "duration": 2100, "rotations": { "upperChest": { "x": 0.02, "y": -0.012, "z": 0.008 }, "leftShoulder": { "x": 0.012, "y": 0.006, "z": 0.012 }, "rightShoulder": { "x": 0.012, "y": -0.006, "z": -0.012 }, "leftUpperArm": { "x": -0.025, "y": 0.006, "z": 0.01 }, "rightUpperArm": { "x": -0.025, "y": -0.006, "z": -0.01 }, "head": { "x": -0.006, "y": -0.018, "z": 0.012 } } }
+    ],
+    "expressionChance": 0.86,
+    "expressions": ["relaxed", "happy", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.018, "max": 0.05 }
+  },
+  "velvetBreathPresentation": {
+    "type": "torso",
+    "duration": 18600,
+    "description": "velvet breath presentation",
+    "proceduralLayers": true,
+    "sampleRate": 36,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.095, "phase": 0.0, "attackSec": 2.0, "releaseSec": 2.4, "bones": { "spine": { "x": -0.012, "y": 0.008, "z": 0.004 }, "upperChest": { "x": -0.075, "y": 0.012, "z": 0.008 }, "neck": { "x": 0.018, "y": 0.006, "z": -0.004 }, "head": { "x": 0.024, "y": 0.012, "z": -0.008 } } },
+      { "mode": "sine", "frequencyHz": 0.047, "phase": 1.2, "attackSec": 2.4, "releaseSec": 2.6, "bones": { "hips": { "x": 0.014, "y": -0.032, "z": 0.062 }, "spine": { "x": 0.018, "y": 0.026, "z": -0.025 }, "upperChest": { "x": 0.032, "y": 0.038, "z": -0.035 } } },
+      { "mode": "pulse", "centerSec": 8.0, "widthSec": 2.2, "attackSec": 1.3, "releaseSec": 2.0, "bones": { "leftShoulder": { "x": 0.018, "y": 0.022, "z": 0.04 }, "rightShoulder": { "x": 0.012, "y": -0.014, "z": -0.026 }, "leftUpperArm": { "x": -0.04, "y": 0.018, "z": 0.03 }, "rightUpperArm": { "x": -0.026, "y": -0.012, "z": -0.02 }, "head": { "x": -0.018, "y": 0.042, "z": -0.034 } } }
+    ],
+    "expressionChance": 0.9,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.012, "max": 0.034 }
+  },
+  "overShoulderTease": {
+    "type": "body",
+    "duration": 15800,
+    "description": "over shoulder tease",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 5000,
+    "stages": [
+      { "duration": 3100, "rotations": { "hips": { "x": 0.01, "y": -0.045, "z": 0.05 }, "spine": { "x": 0.018, "y": 0.05, "z": -0.04 }, "upperChest": { "x": 0.036, "y": 0.074, "z": -0.056 }, "neck": { "x": -0.012, "y": 0.095, "z": -0.072 }, "head": { "x": -0.022, "y": 0.175, "z": -0.12 }, "leftUpperLeg": { "x": -0.038, "y": 0.024, "z": 0.07 }, "rightUpperLeg": { "x": 0.026, "y": -0.016, "z": -0.05 }, "leftLowerLeg": { "x": 0.04, "y": 0.006, "z": -0.014 }, "rightLowerLeg": { "x": -0.024, "y": -0.004, "z": 0.01 }, "leftFoot": { "x": -0.02, "y": 0.01, "z": 0.03 }, "rightFoot": { "x": 0.014, "y": -0.006, "z": -0.02 }, "leftShoulder": { "x": 0.018, "y": 0.014, "z": 0.028 }, "rightShoulder": { "x": 0.038, "y": -0.035, "z": -0.07 } } },
+      { "duration": 3300, "rotations": { "hips": { "x": 0.014, "y": -0.06, "z": 0.07 }, "spine": { "x": 0.026, "y": 0.068, "z": -0.052 }, "upperChest": { "x": 0.052, "y": 0.095, "z": -0.074 }, "neck": { "x": -0.02, "y": 0.12, "z": -0.09 }, "head": { "x": -0.034, "y": 0.22, "z": -0.15 }, "rightUpperArm": { "x": -0.07, "y": -0.032, "z": -0.055 }, "rightLowerArm": { "x": -0.08, "y": -0.018, "z": -0.026 } } },
+      { "duration": 2400, "rotations": { "hips": { "x": 0.006, "y": -0.026, "z": 0.028 }, "spine": { "x": 0.014, "y": 0.026, "z": -0.018 }, "upperChest": { "x": 0.022, "y": 0.034, "z": -0.024 }, "neck": { "x": -0.006, "y": 0.05, "z": -0.034 }, "head": { "x": -0.012, "y": 0.085, "z": -0.056 } } },
+      { "duration": 1800, "rotations": { "upperChest": { "x": 0.01, "y": 0.006, "z": -0.004 }, "neck": { "x": -0.002, "y": 0.012, "z": -0.008 }, "head": { "x": -0.004, "y": 0.018, "z": -0.012 } } }
+    ],
+    "expressionChance": 0.94,
+    "expressions": ["blinkRight", "relaxed", "happy"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.03, "max": 0.072 }
+  },
+  "bustBounceDrop": {
+    "type": "torso",
+    "duration": 14200,
+    "description": "bust bounce and soft drop",
+    "proceduralLayers": true,
+    "sampleRate": 48,
+    "layers": [
+      { "mode": "sine", "frequencyHz": 0.105, "phase": 0.45, "attackSec": 1.5, "releaseSec": 2.0, "bones": { "hips": { "x": 0.016, "y": 0.042, "z": 0.088 }, "spine": { "x": 0.02, "y": -0.03, "z": -0.045 }, "upperChest": { "x": 0.048, "y": -0.035, "z": -0.052 } } },
+      { "mode": "pulse", "centerSec": 4.05, "widthSec": 0.55, "attackSec": 0.18, "releaseSec": 1.1, "bones": { "hips": { "x": -0.012, "y": 0.012, "z": 0.018 }, "spine": { "x": -0.026, "y": 0.004, "z": 0.006 }, "upperChest": { "x": -0.12, "y": 0.006, "z": 0.012 }, "neck": { "x": 0.022, "y": 0.006, "z": -0.006 }, "head": { "x": 0.034, "y": 0.012, "z": -0.01 } } },
+      { "mode": "pulse", "centerSec": 4.52, "widthSec": 0.32, "attackSec": 0.12, "releaseSec": 0.55, "bones": { "spine": { "x": 0.022, "y": -0.002, "z": -0.004 }, "upperChest": { "x": 0.082, "y": -0.004, "z": -0.008 }, "leftShoulder": { "x": 0.018, "y": 0.02, "z": 0.03 }, "rightShoulder": { "x": 0.014, "y": -0.016, "z": -0.026 } } },
+      { "mode": "sine", "frequencyHz": 0.9, "phase": 1.4, "attackSec": 0.3, "releaseSec": 0.85, "bones": { "upperChest": { "x": 0.026, "y": 0.014, "z": 0.022 }, "leftShoulder": { "x": 0.014, "y": 0.02, "z": 0.03 }, "rightShoulder": { "x": 0.01, "y": -0.016, "z": -0.026 }, "leftUpperArm": { "x": -0.026, "y": 0.012, "z": 0.02 }, "rightUpperArm": { "x": -0.02, "y": -0.008, "z": -0.016 } } },
+      { "mode": "pulse", "centerSec": 7.8, "widthSec": 1.6, "attackSec": 0.9, "releaseSec": 1.8, "bones": { "spine": { "x": 0.032, "y": -0.012, "z": -0.015 }, "upperChest": { "x": 0.075, "y": -0.018, "z": -0.026 }, "neck": { "x": -0.018, "y": 0.028, "z": -0.024 }, "head": { "x": -0.034, "y": 0.058, "z": -0.046 } } }
+    ],
+    "expressionChance": 0.92,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.016, "max": 0.046 }
+  },
+  "hairPlayAdjust": {
+    "type": "arms",
+    "duration": 17200,
+    "description": "hair play and shoulder adjust",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 4700,
+    "stages": [
+      { "duration": 2400, "rotations": { "hips": { "x": 0.008, "y": -0.024, "z": 0.026 }, "spine": { "x": 0.016, "y": 0.025, "z": -0.018 }, "upperChest": { "x": 0.034, "y": 0.04, "z": -0.032 }, "neck": { "x": -0.006, "y": 0.04, "z": -0.032 }, "head": { "x": -0.012, "y": 0.08, "z": -0.06 }, "leftShoulder": { "x": 0.095, "y": 0.105, "z": 0.18 }, "leftUpperArm": { "x": -0.48, "y": 0.28, "z": 0.5 }, "leftLowerArm": { "x": -0.58, "y": 0.2, "z": 0.28 }, "leftHand": { "x": -0.24, "y": 0.095, "z": 0.18 }, "rightShoulder": { "x": 0.008, "y": -0.008, "z": -0.018 }, "rightUpperArm": { "x": -0.025, "y": -0.006, "z": -0.012 } } },
+      { "duration": 3600, "rotations": { "hips": { "x": 0.012, "y": -0.036, "z": 0.042 }, "upperChest": { "x": 0.052, "y": 0.058, "z": -0.045 }, "neck": { "x": -0.012, "y": 0.065, "z": -0.05 }, "head": { "x": -0.022, "y": 0.13, "z": -0.095 }, "leftShoulder": { "x": 0.12, "y": 0.14, "z": 0.24 }, "leftUpperArm": { "x": -0.62, "y": 0.36, "z": 0.64 }, "leftLowerArm": { "x": -0.74, "y": 0.25, "z": 0.36 }, "leftHand": { "x": -0.28, "y": 0.11, "z": 0.24 }, "rightShoulder": { "x": 0.026, "y": -0.02, "z": -0.045 }, "rightUpperArm": { "x": -0.058, "y": -0.022, "z": -0.038 } } },
+      { "duration": 2800, "rotations": { "upperChest": { "x": 0.03, "y": -0.018, "z": 0.014 }, "neck": { "x": -0.008, "y": -0.032, "z": 0.028 }, "head": { "x": -0.012, "y": -0.065, "z": 0.054 }, "leftShoulder": { "x": 0.048, "y": 0.05, "z": 0.1 }, "leftUpperArm": { "x": -0.22, "y": 0.12, "z": 0.2 }, "leftLowerArm": { "x": -0.28, "y": 0.09, "z": 0.12 }, "leftHand": { "x": -0.1, "y": 0.035, "z": 0.08 }, "rightShoulder": { "x": 0.095, "y": -0.105, "z": -0.19 }, "rightUpperArm": { "x": -0.48, "y": -0.28, "z": -0.5 }, "rightLowerArm": { "x": -0.58, "y": -0.2, "z": -0.28 }, "rightHand": { "x": -0.22, "y": -0.085, "z": -0.18 } } },
+      { "duration": 2200, "rotations": { "upperChest": { "x": 0.012, "y": -0.006, "z": 0.004 }, "neck": { "x": -0.002, "y": -0.01, "z": 0.008 }, "head": { "x": -0.004, "y": -0.018, "z": 0.014 }, "leftShoulder": { "x": 0.008, "y": 0.008, "z": 0.012 }, "leftUpperArm": { "x": -0.02, "y": 0.008, "z": 0.012 }, "rightShoulder": { "x": 0.008, "y": -0.008, "z": -0.012 }, "rightUpperArm": { "x": -0.02, "y": -0.008, "z": -0.012 } } }
+    ],
+    "expressionChance": 0.92,
+    "expressions": ["relaxed", "happy", "blinkLeft", "blinkRight"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.018, "max": 0.052 }
+  },
+  "lookBackBend": {
+    "type": "body",
+    "duration": 18400,
+    "description": "look back bend pose",
+    "multiStage": true,
+    "sampleRate": 30,
+    "returnDuration": 5200,
+    "stages": [
+      { "duration": 3600, "rotations": { "hips": { "x": 0.055, "y": -0.062, "z": 0.07 }, "spine": { "x": 0.035, "y": 0.07, "z": -0.056 }, "upperChest": { "x": 0.055, "y": 0.105, "z": -0.085 }, "neck": { "x": -0.032, "y": 0.14, "z": -0.105 }, "head": { "x": -0.052, "y": 0.25, "z": -0.165 }, "leftUpperLeg": { "x": -0.065, "y": 0.04, "z": 0.095 }, "rightUpperLeg": { "x": 0.045, "y": -0.026, "z": -0.07 }, "leftLowerLeg": { "x": 0.07, "y": 0.012, "z": -0.02 }, "rightLowerLeg": { "x": -0.04, "y": -0.006, "z": 0.014 }, "leftFoot": { "x": -0.03, "y": 0.014, "z": 0.04 }, "rightFoot": { "x": 0.02, "y": -0.008, "z": -0.028 }, "leftShoulder": { "x": 0.018, "y": 0.012, "z": 0.02 }, "rightShoulder": { "x": 0.04, "y": -0.035, "z": -0.068 } } },
+      { "duration": 4200, "rotations": { "hips": { "x": 0.115, "y": -0.088, "z": 0.105 }, "spine": { "x": 0.065, "y": 0.095, "z": -0.078 }, "upperChest": { "x": 0.088, "y": 0.135, "z": -0.11 }, "neck": { "x": -0.052, "y": 0.18, "z": -0.14 }, "head": { "x": -0.082, "y": 0.32, "z": -0.21 }, "leftUpperArm": { "x": -0.045, "y": 0.018, "z": 0.026 }, "rightUpperArm": { "x": -0.09, "y": -0.042, "z": -0.072 }, "rightLowerArm": { "x": -0.085, "y": -0.02, "z": -0.034 } } },
+      { "duration": 3200, "rotations": { "hips": { "x": 0.075, "y": -0.052, "z": 0.06 }, "spine": { "x": 0.04, "y": 0.055, "z": -0.04 }, "upperChest": { "x": 0.05, "y": 0.075, "z": -0.058 }, "neck": { "x": -0.024, "y": 0.105, "z": -0.078 }, "head": { "x": -0.04, "y": 0.18, "z": -0.12 } } },
+      { "duration": 2200, "rotations": { "hips": { "x": 0.022, "y": -0.018, "z": 0.02 }, "spine": { "x": 0.014, "y": 0.018, "z": -0.012 }, "upperChest": { "x": 0.018, "y": 0.024, "z": -0.016 }, "neck": { "x": -0.006, "y": 0.035, "z": -0.024 }, "head": { "x": -0.012, "y": 0.06, "z": -0.038 } } }
+    ],
+    "expressionChance": 0.96,
+    "expressions": ["blinkRight", "relaxed", "happy"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.04, "max": 0.09 }
+  },
+  "openShoulderBounceWink": {
+    "type": "body",
+    "duration": 14800,
+    "description": "open shoulder bounce wink",
+    "multiStage": true,
+    "sampleRate": 42,
+    "returnDuration": 4400,
+    "stages": [
+      { "duration": 2600, "rotations": { "hips": { "x": 0.018, "y": 0.035, "z": 0.045 }, "spine": { "x": 0.034, "y": -0.026, "z": -0.026 }, "upperChest": { "x": 0.064, "y": -0.032, "z": -0.032 }, "neck": { "x": -0.02, "y": 0.035, "z": -0.026 }, "head": { "x": -0.034, "y": 0.07, "z": -0.048 }, "leftUpperLeg": { "x": -0.03, "y": 0.018, "z": 0.05 }, "rightUpperLeg": { "x": 0.02, "y": -0.012, "z": -0.038 }, "leftLowerLeg": { "x": 0.032, "y": 0.006, "z": -0.012 }, "rightLowerLeg": { "x": -0.022, "y": -0.004, "z": 0.01 }, "leftShoulder": { "x": 0.045, "y": 0.052, "z": 0.085 }, "rightShoulder": { "x": 0.042, "y": -0.05, "z": -0.08 }, "leftUpperArm": { "x": -0.13, "y": 0.065, "z": 0.085 }, "rightUpperArm": { "x": -0.13, "y": -0.065, "z": -0.085 }, "leftLowerArm": { "x": -0.16, "y": 0.03, "z": 0.035 }, "rightLowerArm": { "x": -0.16, "y": -0.03, "z": -0.035 }, "leftHand": { "x": -0.07, "y": 0.025, "z": 0.04 }, "rightHand": { "x": -0.07, "y": -0.025, "z": -0.04 } } },
+      { "duration": 620, "rotations": { "hips": { "x": 0.006, "y": 0.052, "z": 0.064 }, "spine": { "x": 0.01, "y": -0.04, "z": -0.04 }, "upperChest": { "x": 0.1, "y": -0.045, "z": -0.046 }, "neck": { "x": -0.03, "y": 0.045, "z": -0.034 }, "head": { "x": -0.048, "y": 0.09, "z": -0.06 }, "leftUpperLeg": { "x": -0.045, "y": 0.025, "z": 0.074 }, "rightUpperLeg": { "x": 0.03, "y": -0.016, "z": -0.055 }, "leftShoulder": { "x": 0.06, "y": 0.07, "z": 0.105 }, "rightShoulder": { "x": 0.055, "y": -0.068, "z": -0.1 }, "leftUpperArm": { "x": -0.18, "y": 0.085, "z": 0.11 }, "rightUpperArm": { "x": -0.17, "y": -0.082, "z": -0.105 }, "leftLowerArm": { "x": -0.2, "y": 0.04, "z": 0.05 }, "rightLowerArm": { "x": -0.2, "y": -0.04, "z": -0.05 } } },
+      { "duration": 520, "rotations": { "hips": { "x": 0.028, "y": 0.02, "z": 0.034 }, "spine": { "x": 0.05, "y": -0.016, "z": -0.02 }, "upperChest": { "x": 0.05, "y": -0.022, "z": -0.022 }, "neck": { "x": -0.014, "y": 0.024, "z": -0.02 }, "head": { "x": -0.026, "y": 0.054, "z": -0.04 }, "leftUpperArm": { "x": -0.14, "y": 0.065, "z": 0.085 }, "rightUpperArm": { "x": -0.14, "y": -0.065, "z": -0.085 }, "leftLowerArm": { "x": -0.16, "y": 0.03, "z": 0.035 }, "rightLowerArm": { "x": -0.16, "y": -0.03, "z": -0.035 } } },
+      { "duration": 650, "rotations": { "hips": { "x": 0.008, "y": -0.045, "z": -0.052 }, "spine": { "x": 0.018, "y": 0.04, "z": 0.038 }, "upperChest": { "x": 0.088, "y": 0.042, "z": 0.042 }, "neck": { "x": -0.028, "y": -0.042, "z": 0.032 }, "head": { "x": -0.042, "y": -0.084, "z": 0.058 }, "leftShoulder": { "x": 0.058, "y": 0.068, "z": 0.1 }, "rightShoulder": { "x": 0.06, "y": -0.07, "z": -0.105 }, "leftUpperArm": { "x": -0.17, "y": 0.082, "z": 0.105 }, "rightUpperArm": { "x": -0.18, "y": -0.085, "z": -0.11 }, "leftLowerArm": { "x": -0.19, "y": 0.038, "z": 0.045 }, "rightLowerArm": { "x": -0.2, "y": -0.04, "z": -0.05 } } },
+      { "duration": 900, "rotations": { "hips": { "x": 0.026, "y": 0.012, "z": 0.024 }, "spine": { "x": 0.042, "y": -0.01, "z": -0.014 }, "upperChest": { "x": 0.056, "y": -0.014, "z": -0.014 }, "neck": { "x": -0.016, "y": 0.018, "z": -0.014 }, "head": { "x": -0.03, "y": 0.042, "z": -0.03 }, "leftUpperArm": { "x": -0.12, "y": 0.055, "z": 0.075 }, "rightUpperArm": { "x": -0.12, "y": -0.055, "z": -0.075 }, "leftLowerArm": { "x": -0.14, "y": 0.028, "z": 0.032 }, "rightLowerArm": { "x": -0.14, "y": -0.028, "z": -0.032 } } },
+      { "duration": 1800, "rotations": { "hips": { "x": 0.012, "y": 0.018, "z": 0.02 }, "spine": { "x": 0.025, "y": -0.014, "z": -0.014 }, "upperChest": { "x": 0.045, "y": -0.018, "z": -0.018 }, "neck": { "x": -0.01, "y": 0.02, "z": -0.014 }, "head": { "x": -0.018, "y": 0.04, "z": -0.028 }, "leftShoulder": { "x": 0.028, "y": 0.03, "z": 0.052 }, "rightShoulder": { "x": 0.026, "y": -0.03, "z": -0.052 }, "leftUpperArm": { "x": -0.07, "y": 0.028, "z": 0.04 }, "rightUpperArm": { "x": -0.07, "y": -0.028, "z": -0.04 }, "leftLowerArm": { "x": -0.08, "y": 0.014, "z": 0.018 }, "rightLowerArm": { "x": -0.08, "y": -0.014, "z": -0.018 } } }
+    ],
+    "expressionChance": 0.98,
+    "expressions": ["blinkLeft", "blinkRight", "happy", "relaxed"],
+    "applyModelRotation": true,
+    "modelRotationRange": { "min": 0.02, "max": 0.055 }
+  }
+}

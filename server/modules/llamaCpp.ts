@@ -1,0 +1,41 @@
+import type { AppModule } from "./types";
+
+export const llamaCppModule: AppModule = {
+  id: "llama-cpp",
+  name: "llama.cpp",
+  description: "Install, configure, and run a managed local llama.cpp server for chat providers.",
+  kind: "tool",
+  defaultEnabled: false,
+  defaultSettings: {
+    binaryPath: "",
+    modelPath: "",
+    mmprojPath: "",
+    mtpModelPath: "",
+    speculativeMode: "draft-simple",
+    specDraftNMax: 0,
+    host: "127.0.0.1",
+    port: 1234,
+    contextLength: 8192,
+    fitMode: "on",
+    gpuLayers: "auto",
+    threads: -1,
+    batchSize: 2048,
+    ubatchSize: 512,
+    flashAttention: false,
+    noWarmup: false,
+    enableThinking: false,
+    cacheReuse: 256,
+    kvCacheType: "",
+    cpuMoe: false,
+    nCpuMoe: 0,
+    moeNExpert: 0,
+    installDir: "",
+    installedVersion: "",
+    releaseAssetUrl: "",
+    backend: "cpu",
+    modelsDir: "",
+    modelDownloadUrl: "",
+    modelDownloadName: ""
+  },
+  hooks: {}
+};
